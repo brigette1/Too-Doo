@@ -6,6 +6,7 @@ const newTaskBtn = document.querySelector('.add-tasks');
 const list = document.querySelector('.list-tasks');
 
 function showAddTaskPanel() {
+    newTaskBtn.style.visibility = 'hidden';
     list.textContent = '';
 
     const displayTitle = document.createElement('div');
