@@ -1,6 +1,9 @@
+import { Project, HomePage } from "../Homepage/init-classes";
 
 function createTaskForm() {
-    const list = document.querySelector('.list-tasks');
+    // let project = 
+
+    const list = document.querySelector('.todo-list');
 
     const form = document.createElement('form');
     form.classList.add('form');
@@ -48,9 +51,26 @@ function createTaskForm() {
 
     //submit
     const submitBtn = document.createElement('button');
-    submitBtn.type = 'submit';
     submitBtn.textContent = 'Add';
     submitBtn.classList.add('submit-btn');
+
+    // submitBtn.addEventListener('click', function(event) {
+    //     event.preventDefault();
+
+    //     const taskName = document.getElementById('title').value;
+    //     const priority = document.getElementById('priority').value;
+    //     const description = document.getElementById('description').value;
+    //     const dueDate = document.getElementById('date').value;
+
+    //     project.addTodo(taskName, priority, description, dueDate);
+
+    //     document.getElementById('title').value = '';
+    //     document.getElementById('priority').value = '';
+    //     document.getElementById('description').value = '';
+    //     document.getElementById('date').value = ';';
+    //     // displayAllTasks();
+    // })
+
 
     //append
     form.appendChild(titleLabel);
@@ -66,6 +86,11 @@ function createTaskForm() {
     form.appendChild(date);
 
     form.appendChild(submitBtn);
+
+    //function after submission -- creating an instance of a class
+    // function submit(event) {
+ 
+    // }
 }
 
 export {createTaskForm};

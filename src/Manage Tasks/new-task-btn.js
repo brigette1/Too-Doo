@@ -4,7 +4,8 @@ const btn = document.querySelector('.add-tasks');
 
 function newTaskBtnEventListener() {
     btn.addEventListener('click', function() {
-        showAddTaskPanel();
+        // showAddTaskPanel();
+        console.log('hello!')
     }) 
 }
 
