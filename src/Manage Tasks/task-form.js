@@ -1,8 +1,7 @@
-import { Project, HomePage } from "../Homepage/init-classes";
+import { submitTaskInfo } from "./submit-task-btn";
+import { Project } from "../Homepage/init-classes";
 
 function createTaskForm() {
-    // let project = 
-
     const list = document.querySelector('.todo-list');
 
     const form = document.createElement('form');
@@ -51,25 +50,15 @@ function createTaskForm() {
 
     //submit
     const submitBtn = document.createElement('button');
-    submitBtn.textContent = 'Add';
+    submitBtn.type = 'submit';
+    submitBtn.textContent = 'Add Task';
     submitBtn.classList.add('submit-btn');
 
-    // submitBtn.addEventListener('click', function(event) {
-    //     event.preventDefault();
-
-    //     const taskName = document.getElementById('title').value;
-    //     const priority = document.getElementById('priority').value;
-    //     const description = document.getElementById('description').value;
-    //     const dueDate = document.getElementById('date').value;
-
-    //     project.addTodo(taskName, priority, description, dueDate);
-
-    //     document.getElementById('title').value = '';
-    //     document.getElementById('priority').value = '';
-    //     document.getElementById('description').value = '';
-    //     document.getElementById('date').value = ';';
-    //     // displayAllTasks();
-    // })
+    submitBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        submitTaskInfo(project)
+        displayTodos(project);
+    });
 
 
     //append

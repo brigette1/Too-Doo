@@ -8,7 +8,6 @@ function loadHome() {
     newTaskBtnEventListener();
     // testTask();
     createProj();
-    
 }
 
 export {loadHome};

@@ -27,9 +27,10 @@ export class HomePage {
 
     displayProjects() {
         const projectList = document.querySelector('.project-list');
-        // projectList.innerHTML = '';
+        projectList.innerHTML = '';
         this.projects.forEach(project => {
             const listItem = document.createElement('li');
+            listItem.classList.add('proj-item');
             listItem.textContent = project.name; 
             listItem.addEventListener('click', () => this.displayTodos(project));
             projectList.appendChild(listItem);

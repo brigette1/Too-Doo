@@ -1,7 +1,7 @@
 import { createTaskForm } from "./task-form";
 
 
-const newTaskBtn = document.querySelector('.add-tasks');
+const newTaskBtn = document.querySelector('.new-task');
 const list = document.querySelector('.todo-list');
 
 function showAddTaskPanel() {
@@ -18,7 +18,6 @@ function showAddTaskPanel() {
     list.appendChild(newTaskUI);
 
     createTaskForm();
-    // getValues();
 }
 
 export {showAddTaskPanel};
