@@ -1,13 +1,15 @@
-import { newTaskBtnEventListener } from "../Manage Tasks/new-task-btn";
+
 import { testTask } from "../Manage Tasks/test-task";
 import { initDate } from "./init-date";
 import { createProj } from "./create-proj";
+import { HomePage } from "./init-classes";
+
+const homePage = new HomePage();
 
 function loadHome() {
     initDate(); 
-    newTaskBtnEventListener();
     // testTask();
-    createProj();
+    createProj(homePage);
 }
 
 export {loadHome};

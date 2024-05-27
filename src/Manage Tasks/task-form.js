@@ -1,7 +1,7 @@
 import { submitTaskInfo } from "./submit-task-btn";
-import { Project } from "../Homepage/init-classes";
+import { HomePage } from "../Homepage/init-classes";
 
-function createTaskForm() {
+function createTaskForm(project) {
     const list = document.querySelector('.todo-list');
 
     const form = document.createElement('form');
@@ -48,6 +48,8 @@ function createTaskForm() {
     date.name = 'date';
     date.setAttribute('id', 'date');
 
+
+
     //submit
     const submitBtn = document.createElement('button');
     submitBtn.type = 'submit';
@@ -56,8 +58,9 @@ function createTaskForm() {
 
     submitBtn.addEventListener('click', function(event) {
         event.preventDefault();
-        submitTaskInfo(project)
-        displayTodos(project);
+
+        submitTaskInfo(project);
+        project.displayTodos();
     });
 
 

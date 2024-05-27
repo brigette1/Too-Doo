@@ -1,10 +1,9 @@
-import { Project, HomePage } from "./init-classes";
+import { Project } from "./init-classes";
 
 const newProjBtn = document.querySelector('.new-proj');
 const projects = document.querySelector('.project-list');
-const homePage = new HomePage();
 
-function createProj() {
+function createProj(homePage) {
     newProjBtn.addEventListener('click', function() {
         const inputName = document.createElement('input');
         inputName.type = 'text';
@@ -32,6 +31,6 @@ function createProj() {
         projects.appendChild(inputName);
     })
 }
-    
+
 
 export {createProj};

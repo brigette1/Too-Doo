@@ -4,7 +4,7 @@ import { createTaskForm } from "./task-form";
 const newTaskBtn = document.querySelector('.new-task');
 const list = document.querySelector('.todo-list');
 
-function showAddTaskPanel() {
+function showAddTaskPanel(project) {
     newTaskBtn.style.visibility = 'hidden';
     list.textContent = '';
 
@@ -17,7 +17,7 @@ function showAddTaskPanel() {
     newTaskUI.classList.add('new-task-ui');
     list.appendChild(newTaskUI);
 
-    createTaskForm();
+    createTaskForm(project);
 }
 
 export {showAddTaskPanel};
