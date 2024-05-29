@@ -20,6 +20,8 @@ function createProj(homePage) {
                 if (projName !== '') {
                     inputName.style.display = 'none';
                     const newProj = new Project(projName);
+                    newProj.setListProjTitle();
+                    newProj.enableModal();
             
                     homePage.addProject(newProj);
                 }

@@ -36,6 +36,64 @@
 
 .project-display {
     background: aqua;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.modal {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    width: 400px; 
+    padding: 10px 1.3rem 10px 1.3rem; 
+    min-height: 300px;
+    position: absolute; 
+    top: 80px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    z-index: 2;
+}
+
+.modal .flex {
+    display: flex; 
+    justify-content: flex-end;
+    align-items: center;
+    height: 20px;
+}
+
+.modal input {
+    padding: 0.7rem 1rem; 
+    border: 1px solid gray;
+    border-radius: 6px;
+    font-size: 0.9em;
+    width: 90%;
+}
+
+.modal .priority {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+}
+
+.overlay {
+    position: fixed; 
+    top: 0; 
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%; 
+    background: rgba(165, 165, 165, 0.5);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+}
+
+.hidden {
+    display: none;
 }
 
 .proj-title {
